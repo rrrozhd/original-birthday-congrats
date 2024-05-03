@@ -1,0 +1,153 @@
+.gif-container {
+    display: flex; /* Continues using flexbox for layout */
+    justify-content: space-around; /* Keeps images evenly spaced */
+    align-items: center; /* Centers the images vertically in the container */
+    width: 100%; /* Full width of the container */
+    padding: 10px 0; /* Adds vertical padding for better visual separation from other elements */
+}
+
+
+.gif-container img {
+    height: 50px; /* Reduced height to make GIFs smaller */
+    width: auto; /* Allows the width to adjust based on the height to maintain aspect ratio */
+}
+
+
+
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('./1000_F_481774914_OfApWWKxXaRj2mApKti3ivkqYERzPVm4.jpg');
+    background-repeat: no-repeat; /* Ensures the image does not repeat */
+    background-size: cover; /* Covers the entire area of the body */
+    background-position: center center; /* Centers the background image */
+    background-attachment: fixed; /* Optional: keeps the background fixed during scrolling */
+    color: #ff0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+header {
+    width: 100%; /* Full width of the container */
+    color: magenta;
+    text-align: center; /* Centers text horizontally */
+    padding: 20px 0; /* Adds padding for better spacing */
+    display: flex;
+    justify-content: center; /* Flexbox centering horizontally */
+    align-items: center; /* Flexbox centering vertically */
+    text-shadow: 2px 2px 0px #000, 4px 4px 0px rgba(0,0,0,0.2); /* Adds 3D effect */
+
+}
+
+header h1, main p {
+    color: #ffffff; /* White text color for high contrast */
+    text-shadow: 
+        1px 1px 0 #000,   
+        2px 2px 0 #000,   
+        3px 3px 0 #000,   
+        4px 4px 0 #000,   
+        5px 5px 0 #000,   
+        6px 6px 0 #000,   
+        7px 7px 10px rgba(0, 0, 0, 0.5),
+        0 0 20px red, /* Neon glow */
+        0 0 30px red, /* Stronger glow */
+        0 0 40px red; /* Strongest glow */
+}
+
+main p {
+    font-size: 22px; /* Increase the font size */
+    font-weight: bold; /* Make the text bolder */
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 
+        1px 1px 0 #000,  /* First layer of black shadow for depth */
+        2px 2px 0 #000,  /* Second layer to enhance the 3D effect */
+        3px 3px 0 #000,  /* Third layer for deeper effect */
+        4px 4px 4px rgba(0, 0, 0, 0.5); /* Outermost layer with slight blur */
+    width: 100%; /* Ensures the text takes full width available */
+    text-align: center; /* Centers the text if not already */
+}
+
+ul {
+    font-size: 22px; /* Increase the font size */
+    font-weight: bold; /* Make the text bolder */
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 
+        1px 1px 0 #000,  /* First layer of black shadow for depth */
+        2px 2px 0 #000,  /* Second layer to enhance the 3D effect */
+        3px 3px 0 #000,  /* Third layer for deeper effect */
+        4px 4px 4px rgba(0, 0, 0, 0.5); /* Outermost layer with slight blur */
+    width: 100%; /* Ensures the text takes full width available */
+    text-align: center; /* Centers the text if not already */
+}
+
+
+header, main, .gif-container, footer {
+    flex-shrink: 0; /* Prevents these elements from shrinking */
+}
+
+main {
+    flex: 1; /* Allows the main content to grow and take available space */
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically if needed */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text within the content */
+    padding: 20px; /* Adds padding around the content */
+}
+
+.red-button {
+    display: inline-block; /* Makes the link behave like a button */
+    background-color: #ff0000; /* Bright red background */
+    color: #ffffff; /* White text */
+    padding: 15px 30px; /* Top and bottom padding, Left and right padding */
+    font-size: 18px; /* Larger font size */
+    text-align: center; /* Center the text inside the button */
+    text-decoration: none; /* Removes underline from the link */
+    border-radius: 8px; /* Rounded corners */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.red-button:hover, .red-button:focus {
+    background-color: #cc0000; /* Slightly darker red on hover/focus */
+    transform: scale(1.05); /* Slightly larger on hover/focus */
+    cursor: pointer; /* Changes the cursor to indicate it's clickable */
+}
+
+
+footer {
+    background-color: #ff0202;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Smaller mobile devices */
+@media (max-width: 480px) {
+    .gif-container img {
+        height: 50px; /* Smaller for mobile screens */
+    }
+}
+
+/* Larger mobile devices */
+@media (min-width: 481px) and (max-width: 768px) {
+    .gif-container img {
+        height: 70px; /* Slightly larger for bigger mobile devices */
+    }
+}
+
+/* Tablets and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gif-container img {
+        height: 80px; /* Default size set above, good for small tablets and desktops */
+    }
+}
+
+/* Large desktops */
+@media (min-width: 1025px) {
+    .gif-container img {
+        height: 100px; /* Larger for wide screens */
+    }
+}
+
